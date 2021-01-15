@@ -52,7 +52,7 @@ public class ServletTri extends HttpServlet {
 		int idCat =Integer.parseInt(request.getParameter("idCat"));
 		String filtre = request.getParameter("filtre");
 		System.out.println("*********SERVLET ACCUEIL doPOST*****");
-		System.out.println("Idcat= "+idCat + " filtre ="+filtre);
+		
 		
 		Categories categorie = new Categories();
 		List<Categories> listeCategories = new ArrayList<>();
