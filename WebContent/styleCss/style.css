@@ -1,7 +1,12 @@
-/*Page d'accueil*/
+/*CSS ENI-Encheres-Lorris*/
 body{
-    padding-top: 54px;
+    background-color: #EEEEEE;
+    padding-top: 40px;
     padding-bottom: 54px;
+}
+
+#logo-encheres{
+	height: 80%;
 }
 @media (max-width: 992px) {
   body {
@@ -15,7 +20,6 @@ body{
 
 h2{
     text-align: center;
-    color: red;
 }
 
 #filtre{
@@ -38,3 +42,38 @@ h2{
         margin-top: 20px;
     }
 }
+
+#box{
+    margin-top: 10px;
+}
+
+
+#logo-eni{
+	margin-left: 20px;
+	
+}
+
+.barblanc{
+	height: 50px;
+	background-color: #EEEEEE;
+	margin-top:15%;
+}
+
+.barbleu{
+	height: 50px;
+	background-color: #005ADF;
+}
+.nous{
+	text-align: center;
+}
+
+#logo-eni{
+	height: 95%%;
+}
+
+
+
+
+
+
+
