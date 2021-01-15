@@ -17,19 +17,19 @@ import fr.eni.enchere.bo.Utilisateur;
 
 public class ArticleDAOJdbcImpl implements ArticleDAO{
 	
-	private static final String INSERT_ARTICLE = "INSERT INTO ARTICLES (nom, description, date_debut, date_fin, prix_initial, prix_vente, idUser, idCategorie, idRetrait) VALUES (?,?,?,?,?,?,?,?,?)";
+	private static final String INSERT_ARTICLE = "INSERT INTO ARTICLES (nom, description, date_debut, date_fin, prix_initial, prix_vente, idUserArticle, idCategorie, idRetrait) VALUES (?,?,?,?,?,?,?,?,?)";
 	private static final String INSERT_RETRAIT = "INSERT INTO RETRAITS (rue, code_postal, ville) VALUES (?,?,?)";
 	private static final String GET_CATEGORIE = "SELECT * FROM CATEGORIES";
 	private static final String SELECT_ARTICLES_EN_VENTE = "SELECT u.idUser, u.pseudo, u.nom nomUser, u.prenom, u.email, u.telephone, u.rue rueUser, u.code_postal CPUser, u.ville villeUser," +
 									" a.idArticle, a.nom, a.description, a.date_debut, a.date_fin, a.prix_vente, a.idCategorie, r.rue, r.code_postal, r.ville" +
-									" FROM ARTICLES a INNER JOIN  RETRAITS r ON a.idRetrait=r.idRetrait INNER JOIN USERS u ON u.idUser=a.idUser";
+									" FROM ARTICLES a INNER JOIN  RETRAITS r ON a.idRetrait=r.idRetrait INNER JOIN USERS u ON u.idUser=a.idUserArticle";
 	private static final String SELECT_ENCHERE_BY_ARTICLE = "SELECT e.idUser,e.date, e.MAX(montant), u.pseudo" +
-															"FROM ENCHERES e  INNER JOIN ON USERS u WHERE u.idUser = e.idUser"+
+															"FROM ENCHERES e  INNER JOIN ON USERS u WHERE u.idUser = e.idUserEnchere"+
 															"AND idArticle = ? ";
-	private static final String GET_ARTICLE_BY_ID = "SELECT a.idArticle, a.nom, a.description, c.libelle, a.prix_vente, a.prix_initial, a.date_fin, r.rue, r.code_postal, r.ville, a.idUser, u.pseudo FROM ARTICLES a INNER JOIN  RETRAITS r ON r.idRetrait = a.idRetrait INNER JOIN  CATEGORIES c ON c.idCategorie = a.idCategorie INNER JOIN USERS u ON u.idUser = a.idUser WHERE idArticle = ?";
+	private static final String GET_ARTICLE_BY_ID = "SELECT a.idArticle, a.nom, a.description, c.libelle, a.prix_vente, a.prix_initial, a.date_fin, r.rue, r.code_postal, r.ville, a.idUserArticle, u.pseudo FROM ARTICLES a INNER JOIN  RETRAITS r ON r.idRetrait = a.idRetrait INNER JOIN  CATEGORIES c ON c.idCategorie = a.idCategorie INNER JOIN USERS u ON u.idUser = a.idUser WHERE idArticle = ?";
 	private static final String UPDATE_ENCHERE_ARTICLE = "UPDATE ARTICLES SET prix_vente = ? WHERE idArticle = ?";
-	private static final String GET_LISTEARTICLES_POUR_TRI="SELECT a.idArticle, a.nom, a.prix_vente, a.date_debut, a.date_fin, a.idUser, a.idCategorie, u.idUser, u.pseudo\r\n" + 
-			"		FROM ARTICLES a INNER JOIN USERS u ON a.idUSer = u.idUser";
+	private static final String GET_LISTEARTICLES_POUR_TRI="SELECT a.idArticle, a.nom, a.prix_vente, a.date_debut, a.date_fin, a.idUserArticle, a.idCategorie, u.idUser, u.pseudo\r\n" + 
+			"		FROM ARTICLES a INNER JOIN USERS u ON a.idUSerArticle = u.idUser";
 			
 			
 		@Override

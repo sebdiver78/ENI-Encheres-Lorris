@@ -1,6 +1,6 @@
 package fr.eni.enchere.bll;
 
-import java.time.LocalDate;
+import java.time.LocalDate; 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +14,6 @@ import fr.eni.enchere.dal.ArticleDAO;
 import fr.eni.enchere.dal.DAOFactory;
 import fr.eni.enchere.dal.EnchereDAO;
 import fr.eni.enchere.dal.UtilisateurDAO;
-import javafx.util.converter.LocalDateStringConverter;
 
 public class EnchereManager {
 	
