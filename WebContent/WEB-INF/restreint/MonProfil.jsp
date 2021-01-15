@@ -1,14 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>inscription</title>
-</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Pour récupérer le fichier css  -->
+	<style><%@include file="../../styleCss/style.css"%></style> 
+	<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/styleCss/style.css" /> --%> 
+
+   					 <title>ENI-Encheres profil</title>
+  </head>
 <body>
-		<h1>MON PROFIL</h1>
+    <div class="container" style="margin-top: 20px">
+        <div class="row">
+             <div class="col-sm-8">
+                <a href="<%=request.getContextPath() %>/AccueilSession "><img src="./images/logo-eni-encheres.png" alt="photo ici"></a>
+            </div> 
+            <div class="col-sm-12" style="text-align: right; margin-bottom: 20px"> 
+                <a href="<%=request.getContextPath() %>#">Enchères</a>
+				<a href="<%=request.getContextPath() %>/VendreUnArticle">Vendre un article</a>
+											      <!-- /rien pour retour à l'accueil -->
+				<a href="<%=request.getContextPath() %> ">Déconnexion</a> 
+            </div>
+        	<p>Crédit disponible : ${sessionScope.sessionUtilisateur.credit }</p>
+        </div>
+    </div>         
+  
 	<div class="profil">
 	<form method="post" action="Update?id=${sessionScope.sessionUtilisateur.noUtilisateur}">
 		<div class="col1">
@@ -78,7 +101,8 @@
 	
 	
 	</div>
-
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -20,9 +20,8 @@ import fr.eni.enchere.bo.Categories;
  */
 @WebServlet(
 		urlPatterns= {
-				"/",
+				"",
 				"/rechercher"
-				
 		})
 		
 	
@@ -42,7 +41,7 @@ public class ServletAccueil extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		if (request.getServletPath().equals("/")) { 
+		if (request.getServletPath().equals("")) { 
 		//recup libelle categorieBDD
 		Categories categorie = new Categories();
 		List<Categories> listeCategories = new ArrayList<>();
@@ -61,6 +60,7 @@ public class ServletAccueil extends HttpServlet {
 		} 
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Accueil.jsp");
+		
 		rd.forward(request, response);
 	}
 

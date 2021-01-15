@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!doctype html>
 <html>
@@ -9,18 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- Pour récupérer le fichier css  -->
+	<style><%@include file="../styleCss/style.css"%></style> 
+	<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/styleCss/style.css" /> --%> 
 
-   				 <title>ENI-Encheres Accueil</title>
+   					 <title>ENI-Encheres Accueil</title>
   </head>
 
-  
   <body> 	
     <div class="container" style="margin-top: 20px">
         <div class="row">
-             <div class="col-sm-8"> 
-                <a href="<%=request.getContextPath() %>/" style="text-decoration: none; color: blue; font-size: 40px; font-weight: bold;">ENI-Enchères</a>
-                <img src="images/logo-eni-encheres.png" alt="photo ici">
+             <div class="col-sm-8">
+             								      <!-- /rien pour retour à l'accueil -->
+                <a href="<%=request.getContextPath() %> "><img src="./images/logo-eni-encheres.png" alt="photo ici"></a>
+                
             </div> 
             <div class="col-sm-4" style="margin-top: 20px; margin-bottom: 20px"> 
                 <a href="<%=request.getContextPath() %>/Ajout">Créer un compte -</a>

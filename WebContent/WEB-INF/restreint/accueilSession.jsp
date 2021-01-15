@@ -19,13 +19,14 @@
     <div class="container">
         <div class="row">
         	<div class="col-sm-8" style="margin-top: 20px; margin-left: 0.65%">
-                <a href="<%=request.getContextPath() %>/AccueilSession" style="text-decoration: none; color: blue; font-size: 40px; font-weight: bold;">ENI-Enchères</a>    
+                <a href="<%=request.getContextPath() %>/AccueilSession "><img src="./images/logo-eni-encheres.png" alt="photo ici"></a>    
             </div> 
             <div class="col-sm-12" style="text-align: right; margin-bottom: 20px"> 
                 <a href="<%=request.getContextPath() %>#">Enchères</a>
 				<a href="<%=request.getContextPath() %>/VendreUnArticle">Vendre un article</a>
             	<a href="${pageContext.request.contextPath}/Profil?id=${sessionScope.sessionUtilisateur.noUtilisateur}">Mon profil</a>
-				<a href="<%=request.getContextPath() %>/">Déconnexion</a> 
+												  <!-- /rien pour retour à l'accueil -->
+				<a href="<%=request.getContextPath() %> ">Déconnexion</a> 
             </div>
             <p>Bienvenue ${sessionScope.sessionUtilisateur.prenom} ${sessionScope.sessionUtilisateur.nom}</p>
         	<p>Crédit disponible : ${sessionScope.sessionUtilisateur.credit }</p>
