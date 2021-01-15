@@ -18,11 +18,11 @@
   </head>
   
   <body> 	
-    <div class="container" style="margin-top: 20px">
+    <div class="container">
         <div class="row">
              <div class="col-sm-8">
              								      <!-- /rien pour retour à l'accueil -->
-                <a href="<%=request.getContextPath() %> "><img src="./images/logo-eni-encheres.png" alt="photo ici"></a>
+                <a href="<%=request.getContextPath() %> "><img id="logo-encheres" src="./images/logo-eni-encheres.png" alt="photo ici"></a>
             </div>  
 		    <main>
 				<form method="post" action="Connexion">
@@ -46,6 +46,10 @@
 				
 			</main>
     	</div>
+    	<footer>
+	      	<div class="barblanc"><img id="logo-eni" src="./images/logo-eni.png" alt="photo ici"></div>
+	      	<div class="barbleu"><p class="nous">Réalisé par Sebastien et Lorris</p></div>
+      </footer>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>

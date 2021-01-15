@@ -20,7 +20,7 @@
     <div class="container" style="margin-top: 20px">
         <div class="row">
              <div class="col-sm-8">
-                <a href="<%=request.getContextPath() %>/AccueilSession "><img src="./images/logo-eni-encheres.png" alt="photo ici"></a>
+                <a href="<%=request.getContextPath() %>/AccueilSession "><img id="logo-encheres" src="./images/logo-eni-encheres.png" alt="photo ici"></a>
             </div> 
             <div class="col-sm-12" style="text-align: right; margin-bottom: 20px"> 
                 <a href="<%=request.getContextPath() %>#">Enchères</a>
@@ -88,19 +88,12 @@
 	<p>${form.resultat}</p> 
 	<p>${erreurs['motDePasse']} </p>
 	
-		
 	</form>
-	
-		
-	
-	
-	
-	
-	
-	
-	
-	
 	</div>
+	<footer>
+      	<div class="barblanc"><img id="logo-eni" src="./images/logo-eni.png" alt="photo ici"></div>
+      	<div class="barbleu"><p class="nous">Réalisé par Sebastien et Lorris</p></div>
+      </footer>
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 

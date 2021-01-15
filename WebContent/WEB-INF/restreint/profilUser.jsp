@@ -26,7 +26,10 @@
 <p>Ville ${utilisateur.ville }</p>
 
 <a href="AccueilSession">Retour</a>
-
+<footer>
+	<div class="barblanc"><img id="logo-eni" src="./images/logo-eni.png" alt="photo ici"></div>
+	<div class="barbleu"><p class="nous">Réalisé par Sebastien et Lorris</p></div>
+</footer>
 
 </body>
 </html>
